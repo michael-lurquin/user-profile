@@ -18,7 +18,7 @@ Rajouter dans le `composer.json`, ce qui suit :
 Ensuite exécuter la commande suivante :
 
 ```
-composer require michael-lurquin/user-profile:"master"
+composer require michael-lurquin/user-profile
 ```
 
 ## Vues

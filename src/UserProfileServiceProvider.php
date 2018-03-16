@@ -18,7 +18,7 @@ class UserProfileServiceProvider extends ServiceProvider
             __DIR__ . '/resources/views/app.blade.php' => resource_path('views/layouts/app.blade.php'),
         ], 'views');
 
-        include __DIR__ . '/routes.php';
+        $this->loadRoutesFrom(__DIR__ . '/routes.php');
     }
 
     /**
