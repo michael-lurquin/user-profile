@@ -16,7 +16,9 @@ Route::group(['middleware' => ['web', 'auth']], function() {
             'name' => 'required|max:255',
         ]);
 
-        dd($validatedData);
+        auth()->user()->update($validatedData);
+
+        return back();
 
     })->name('profile');
 
