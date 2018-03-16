@@ -11,8 +11,8 @@
                         <form action="{{ route('profile') }}" method="POST" novalidate>
                             <div class="form-group">
                                 <label for="name">{{ __('Name') }}</label>
-                                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="{{ __('Enter name') }}">
-                                <small id="nameHelp" class="form-text text-muted">{{ $errors->first() }}</small>
+                                <input type="text" class="form-control" id="name" placeholder="{{ __('Enter name') }}">
+                                <div class="invalid-feedback">{{ $errors->first('name') }}</div>
                             </div>
                             <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
                         </form>
