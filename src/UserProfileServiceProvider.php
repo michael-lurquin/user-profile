@@ -13,12 +13,12 @@ class UserProfileServiceProvider extends ServiceProvider
      */
     public function boot() : void
     {
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'user-profile');
-
         $this->publishes([
             __DIR__ . '/resources/views/profile.blade.php' => resource_path('views/profile.blade.php'),
             __DIR__ . '/resources/views/app.blade.php' => resource_path('views/layouts/app.blade.php'),
         ]);
+
+        include __DIR__ . '/routes.php';
     }
 
     /**
