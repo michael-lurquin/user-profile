@@ -16,7 +16,8 @@ class UserProfileServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'user-profile');
 
         $this->publishes([
-            __DIR__ . '/resources/views' => resource_path('views'),
+            __DIR__ . '/resources/views/profile.blade.php' => resource_path('views/profile.blade.php'),
+            __DIR__ . '/resources/views/app.blade.php' => resource_path('views/layouts/app.blade.php'),
         ]);
     }
 
