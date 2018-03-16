@@ -8,7 +8,7 @@
                     <div class="card-header">My Profile</div>
 
                     <div class="card-body">
-                        My Page Profile
+                        My {{ $user->name }} Profile
                     </div>
                 </div>
             </div>
