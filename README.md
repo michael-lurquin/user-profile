@@ -1,5 +1,7 @@
 # User Profile
 
+Rajoute une vue pour afficher le profil de l'utilisateur ainsi que pour modifier son nom.
+
 ## Installation
 
 Rajouter dans le `composer.json`, ce qui suit :

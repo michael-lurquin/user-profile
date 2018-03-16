@@ -5,10 +5,17 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">My Profile</div>
+                    <div class="card-header">My <strong>{{ $user->name }}</strong> Profile</div>
 
                     <div class="card-body">
-                        My <strong>{{ $user->name }}</strong> Profile
+                        <form action="{{ route('profile') }}" method="POST" novalidate>
+                            <div class="form-group">
+                                <label for="name">{{ __('Name') }}</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="{{ __('Enter name') }}">
+                                <small id="nameHelp" class="form-text text-muted">{{ $errors->first() }}</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                        </form>
                     </div>
                 </div>
             </div>
