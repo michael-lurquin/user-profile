@@ -18,7 +18,7 @@ Route::group(['middleware' => ['web', 'auth']], function() {
 
         auth()->user()->update($validatedData);
 
-        return back();
+        return back()->withSuccess('User Profile Updated Successfully');
 
     })->name('profile');
 
