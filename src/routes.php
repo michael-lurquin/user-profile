@@ -12,11 +12,12 @@ Route::group(['middleware' => ['web', 'auth']], function() {
 
     Route::post('profile', function(Request $request) {
 
-        dd($request->all());
-
         $validatedData = $request->validate([
             'name' => 'required|max:255',
         ]);
+
+        dd($validatedData);
+
     })->name('profile');
 
 });
