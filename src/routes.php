@@ -13,7 +13,6 @@ Route::group(['middleware' => ['web', 'auth']], function() {
     Route::post('profile', function(Request $request) {
 
         $rules = config('user-profile.rules');
-        dd($rules);
 
         $validatedData = $request->validate($rules);
 
