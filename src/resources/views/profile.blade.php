@@ -10,7 +10,7 @@
                     <div class="card-body">
                         @if ( session('errors') )
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong>Whoops!</strong>&nbsp;There were some problems with your input.
+                                <strong>Whoops!</strong>&nbsp;{{ __('There were some problems with your input.') }}
                                 <ul>
                                     @foreach($errors->all() as $error)
                                         <li>{!! $error !!}</li>
@@ -34,7 +34,7 @@
                             <div class="form-group">
                                 <label for="name">{{ __('Name') }}</label>
                                 <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="name" name="name" placeholder="{{ __('Enter name') }}" value="{{ old('name', $user->name) }}">
-                                @if ($errors->has('name'))
+                                @if ( $errors->has('name') )
                                     <div class="invalid-feedback">{{ $errors->first('name') }}</div>
                                 @endif
                             </div>

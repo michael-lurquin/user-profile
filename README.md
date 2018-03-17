@@ -21,6 +21,18 @@ Ensuite exécuter la commande suivante :
 composer require michael-lurquin/user-profile
 ```
 
+## Configuration
+
+```
+<?php
+
+return [
+    'rules' => [
+        'name' => 'required|max:255',
+    ],
+];
+```
+
 ## Vues
 
 Pour afficher les vues, utiliser la commande suivante :
@@ -39,4 +51,3 @@ views/layouts/app.blade.php
 ## User
 
 Rajouter le trait **UserProfile** dans le modèle **User** sous le namespace **MichaelLurquin\UserProfile\UserProfile**
-
