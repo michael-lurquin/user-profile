@@ -12,9 +12,10 @@ Route::group(['middleware' => ['web', 'auth']], function() {
 
     Route::post('profile', function(Request $request) {
 
-        $validatedData = $request->validate([
-            'name' => 'required|max:255',
-        ]);
+        $rules = config('user-profile.rules');
+        dd($rules);
+
+        $validatedData = $request->validate($rules);
 
         auth()->user()->update($validatedData);
 

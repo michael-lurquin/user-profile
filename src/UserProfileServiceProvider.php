@@ -19,6 +19,8 @@ class UserProfileServiceProvider extends ServiceProvider
         ], 'views');
 
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
+
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'user-profile');
     }
 
     /**

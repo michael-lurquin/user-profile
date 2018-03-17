@@ -12,7 +12,7 @@ class UserProfileTest extends TestCase
     /**
      * @test
      */
-    public function testUpdateProfileFailed()
+    public function testUpdateProfile()
     {
         $user = $this->createUser();
 
